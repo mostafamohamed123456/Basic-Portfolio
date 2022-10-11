@@ -1,0 +1,271 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/91adc17bd4.js" crossorigin="anonymous"></script>
+        <link href="css/main.css" rel="stylesheet">
+        <body>
+
+            <!--Creating NavBar-->
+            <nav class="navBar">
+                <h1 class="logo">port<span>folio</span></h1>
+                <ul class="navBar-list">
+                    <li><a href="index.html"><i class="glyphicon glyphicon-home"></i>home</a></li>
+                    <li><a href="#about"><i class="glyphicon glyphicon-list-alt"></i>about</a></li>
+                    <li><a href="#services"><i class="glyphicon glyphicon-tasks"></i>services</a></li>
+                    <li><a href="#contact"><i class="glyphicon glyphicon-envelope"></i>contact</a></li>
+                    <li><a href="#projects"><i class="fas fa-swatchbook"></i>projects</a></li>
+                </ul>
+                <button class="responsive-btn"><i class="glyphicon glyphicon-menu-hamburger"></i></button>
+            </nav>
+            <!--End NavBar-->
+
+            <div class="first-section container">
+                <div class="row slide-show">
+                    <span id="left" class="col-sm-2"><i class="glyphicon glyphicon-menu-left"></i></span>
+                    <div class="viewing-data col-md-8">
+                        <div class="intro">
+                            <img class="profImg" src="images/01.jpg" alt="mostafa mohamed" title="mostafa mohamed">
+                            <p class="pMsg">mostafa mohamed !</p>
+                            <div class="social-icons">
+                                <span><i class="fab fa-facebook-f"></i></span>
+                                <span><i class="fab fa-github"></i></span>
+                                <span><i class="fab fa-linkedin-in"></i></span>
+                                <span><i class="fas fa-envelope"></i></span>
+                                <span><i class="fab fa-whatsapp"></i></span>
+                            </div>
+                        </div>
+                        <div class="brief-about">
+                            <header class="brief-header">brief</header>
+                            <p class="brief-details">welcome to my portfolio, i'm web developer and this is my portfolio, and you can access my <a href="#">peojects</a> to see more of my works. </p>
+                            <a href="mostafa mohamed.pdf" download class="downloadCv">download cv <i class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                    <span id="right" class="col-sm-2"><i class="glyphicon glyphicon-menu-right"></i></span>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#EEE" fill-opacity="1" d="M0,192L30,186.7C60,181,120,171,180,170.7C240,171,300,181,360,192C420,203,480,213,540,192C600,171,660,117,720,112C780,107,840,149,900,149.3C960,149,1020,107,1080,101.3C1140,96,1200,128,1260,165.3C1320,203,1380,245,1410,266.7L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+            </svg>
+
+            <!--Seconed section-->
+            <div id="about" class="second-section">
+                <div class="left-container col-sm-3">
+                    <header class="about-header">about <span>me</span></header>
+                    <ul class="about-list-items">
+                        <li class="active"><i class="fas fa-user-alt"></i> profile</li>
+                        <li><i class="fas fa-chart-bar"></i> skills</li>
+                        <li><i class="fas fa-graduation-cap"></i> educate</li>
+                    </ul>
+                </div>
+                <div class="right-container col-sm-6">
+
+                    <!--Profile Container-->
+                    <div class="active profile">
+                        <header class="profile-haeder">hello, iam mostafa mohamed</header>
+                        <span class="address-details">from giza, egypt</span>
+                        <p class="profile-paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod amet consectetur officiis asperiores numquam architecto veritatis eum maxime eius placeat culpa tempore, aperiam vel illum sapiente voluptate, dignissimos accusamus incidunt!</p>
+                        <a href="#services">read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                    </div>
+
+                    <!--Skills Container-->
+                    <div class="skills">
+                        <header class="skills-header"><span>my</span> skills</header>
+                        <div class="skills-container">
+                            <div class="container-row row">
+                                <div class="html row">
+                                    <label class="col-md-5">html</label>
+                                    <span class="containers col-md-6">
+                                        <span class="skill-value" data-value="95%"></span>
+                                        <span class="value"></span>
+                                    </span>
+                                </div>
+                                <div class="css row">
+                                    <label class="col-md-5">css</label>
+                                    <span class="containers col-md-6">
+                                        <span class="skill-value" data-value="90%"></span>
+                                        <span class="value"></span>
+                                    </span>
+                                </div>
+                                <div class="js row">
+                                    <label class="col-md-5">javascript (es6)</label>
+                                    <span class="containers col-md-6">
+                                        <span class="skill-value" data-value="80%"></span>
+                                        <span class="value"></span>
+                                    </span>
+                                </div>
+                                <div class="bootstrap row">
+                                    <label class="col-md-5">bootstrap</label>
+                                    <span class="containers col-md-6">
+                                        <span class="skill-value" data-value="78%"></span>
+                                        <span class="value"></span>
+                                    </span>
+                                </div>
+                                <div class="sass row">
+                                    <label class="col-md-5">sass</label>
+                                    <span class="containers col-md-6">
+                                        <span class="skill-value" data-value="90%"></span>
+                                        <span class="value"></span>
+                                    </span>
+                                </div>
+                                <div class="vue row">
+                                    <label class="col-md-5">vue.js </label>
+                                    <span class="containers col-md-6">
+                                        <span class="skill-value" data-value="85%"></span>
+                                        <span class="value"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Education Container-->
+                    <div class="education">
+                        <header class="education-header">education</header>
+                        <p class="education-details-one">Higher Institute for Computer Sciences and Information Systems, 6th of October — Bachelor's Degree in Computer Sciences </p>
+                        <p class="education-details-two">Front-End Development - Udacity  <span class="course-details">(Html - Css & Advanced Css - JavaScript)</span> </p>
+                        <p class="education-details-three">vue.js - course  <span class="course-details">selflearning & documentation</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <svg class = "benhom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#EEE" fill-opacity="1" d="M0,192L30,186.7C60,181,120,171,180,170.7C240,171,300,181,360,192C420,203,480,213,540,192C600,171,660,117,720,112C780,107,840,149,900,149.3C960,149,1020,107,1080,101.3C1140,96,1200,128,1260,165.3C1320,203,1380,245,1410,266.7L1440,288L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+            </svg>
+
+            <!--Services Section-->
+            <div id = "services" class="services">
+                <header class="services-header"><span>my</span> services</header>
+                <div class="services-container container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fas fa-cogs"></i></span>
+                            <header>web development</header>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi pariatur, necessitatibus fuga quam repellendus voluptatibus.</p>                        </div>
+                        <div class="col-md-3">
+                            <span><i class="fas fa-code"></i></span>
+                            <header>web design</header>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi pariatur, necessitatibus fuga quam repellendus voluptatibus.</p>                        </div>
+                        <div class="col-md-3">
+                            <span><i class="fab fa-github"></i></span>
+                            <header>git & github</header>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi pariatur, necessitatibus fuga quam repellendus voluptatibus.</p>                        </div>
+                        <div class="col-md-3">
+                            <span><i class="far fa-lightbulb"></i></span>
+                            <header>problem solving</header>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi pariatur, necessitatibus fuga quam repellendus voluptatibus.</p>                        </div>
+                        <div class="col-md-3">
+                            <span><i class="fas fa-mobile-alt"></i></span>
+                            <header>web application</header>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi pariatur, necessitatibus fuga quam repellendus voluptatibus.</p>                        </div>
+                        <div class="col-md-3">
+                            <span><i class="fas fa-laptop-code"></i></span>
+                            <header>ui/ux desing</header>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi pariatur, necessitatibus fuga quam repellendus voluptatibus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#EEE" fill-opacity="1" d="M0,192L30,186.7C60,181,120,171,180,170.7C240,171,300,181,360,192C420,203,480,213,540,192C600,171,660,117,720,112C780,107,840,149,900,149.3C960,149,1020,107,1080,101.3C1140,96,1200,128,1260,165.3C1320,203,1380,245,1410,266.7L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
+            </svg>
+
+            <!--Contact Section-->
+            <div class="contact" id="contact">
+                <header class="contact-header">contact <span>me</span></header>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 emails-container">
+                            <h2 class="social">social</h2>
+                            <span data-link="https://www.facebook.com/mostafa.abosaba/"><i class="fab fa-facebook-f"></i></span>
+                            <span data-link="https://twitter.com/mostafa74459923"><i class="fab fa-twitter"></i></span>
+                            <span data-link="https://www.linkedin.com/in/mostafa-mohamed-55ab80169/"><i class="fab fa-linkedin-in"></i></span>
+                            <span data-link="https://github.com/mostafamohamed123456"><i class="fab fa-github"></i></span>
+                            <span data-link="https://www.instagram.com/mustafamuhmed11/"><i class="fab fa-instagram"></i></span>
+                            <span data-link="mostafakasper257@gmail.com"><i class="fas fa-envelope"></i></span>
+                            <span data-link="https://wa.me/01122284535?text=Hello"><i class="fab fa-whatsapp"></i></span>
+                            <span data-link="tel:+201060712125"><i class="fas fa-phone-alt"></i></span>
+                        </div>
+                        <div class="col-md-6 message">
+                            <form action="">
+                                <input type="text" placeholder="enter first name" name="firstName" required>
+                                <input type="text" placeholder="enter last name" name="lastName" required>
+                                <textarea placeholder="message...."></textarea>
+                                <input type="submit" value="send">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: relative;
+            top: -11px;">
+                <path fill="#EEE" fill-opacity="1" d="M0,192L30,186.7C60,181,120,171,180,170.7C240,171,300,181,360,192C420,203,480,213,540,192C600,171,660,117,720,112C780,107,840,149,900,149.3C960,149,1020,107,1080,101.3C1140,96,1200,128,1260,165.3C1320,203,1380,245,1410,266.7L1440,288L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
+            </svg>
+
+            <!--Projects Section-->
+            <div id="projects" class="projects">
+                <header class="projects-header"><span>my</span> projects</header>
+                <div class="projects-container">
+                        <!--Weather-->
+                        <div data-link="https://mostafamohamed123456.github.io/Weather/">
+                            <img src="images/weather.png" alt="weather" title="weather">
+                            <div class="top"></div>
+                            <header class="weather-header">weather <i class="fas fa-link"></i></header>
+                        </div>
+
+                        <!--Creative-->
+                        <div data-link="https://mostafamohamed123456.github.io/Creative/">
+                            <img src="images/creative.png" alt="creative" title="creative">
+                            <div class="top"></div>
+                            <header class="weather-header">creative <i class="fas fa-link"></i></header>
+                        </div>
+
+                        <!--Blogr-->
+                        <div data-link="https://mostafamohamed123456.github.io/Blogr/">
+                            <img src="images/blogr.png" alt="blogr" title="blogr">
+                            <div class="top"></div>
+                            <header>blogr <i class="fas fa-link"></i></header>
+                        </div>
+
+                        <!--Todo-list-->
+                        <div data-link="https://mostafamohamed123456.github.io/To-Do-list-/">
+                            <img src="images/todo-list.png" alt="" title="">
+                            <div class="top"></div>
+                            <header>todo-list <i class="fas fa-link"></i></header>
+                        </div>
+
+                        <!--Calculator-->
+                        <div data-link="https://mostafamohamed123456.github.io/calculator/">
+                            <img src="images/calculator.png" alt="calculator" title="calculator">
+                            <div class="top"></div>
+                            <header>Calculator <i class="fas fa-link"></i></header>
+                        </div>
+
+                        <!--Memory game-->
+                        <div data-link="https://mostafamohamed123456.github.io/Memory-Game/">
+                            <img src="images/memory-game.jpg" alt="memory-game" title="memory-game">
+                            <div class="top"></div>
+                            <header>memory-game <i class="fas fa-link"></i></header>
+                        </div>
+
+                        <!--Profiles-->
+                        <div data-link="https://mostafamohamed123456.github.io/profiles/">
+                            <img src="images/profiles.png" alt="profiles" title="profiles">
+                            <div class="top"></div>
+                            <header>Profiles <i class="fas fa-link"></i></header>
+                        </div>
+                </div>
+            </div>
+            <script src="javascript/javascript.js"></script>
+        </body>
+    </head>
+</html>

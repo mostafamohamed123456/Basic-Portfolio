@@ -1,0 +1,74 @@
+@use "../mixins" as *;
+.navBar{
+    display:flex;
+    justify-content:space-evenly;
+    padding:8px;
+    width:100%;
+    & .logo{
+        color:#EEE;;
+        @include upperCaseText;
+        & span{
+            color: #ec3850;
+        }
+    }
+    & .navBar-list{
+        & li{
+            display:inline-block;
+            margin-right:8px;
+            margin-top: 28px;
+            & > a {
+                cursor:pointer;
+                color:#EEE;
+                font-size:21px;
+                font-weight:bold;
+                @include upperCaseText;
+                transition:all .3s linear;
+                position:relative;
+                & i {
+                    margin: 0 5px;
+                }
+                &::before{
+                    content:'';
+                    background:#EEE;
+                    width:14px;
+                    height:14px;
+                    border-radius:50%;
+                    transition:all .3s linear;
+                    transform:translatex(-50%) scale(.002,.002);
+                    opacity: 0;
+                    position: absolute;
+                    bottom:-14px;
+                    left: 50%;
+                }
+                &:hover{
+                    text-decoration:none;
+                    &::before{
+                        transform: translatex(-50%) scale(1,1);;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    & .responsive-btn{
+        height: 50px;
+        width:50px;
+        color:#EEE;
+        background:unset;
+        border:0px;
+        display:none;;
+        margin-top: 19px;
+        font-size:25px;;
+    }
+}
+@media (min-width:0px) AND (max-width:1000px) {
+    .navBar{
+        justify-content: space-between;
+    }
+    .navBar-list{
+        display:none;
+    }
+    .navBar .responsive-btn{
+        display:inline-block
+    }
+}

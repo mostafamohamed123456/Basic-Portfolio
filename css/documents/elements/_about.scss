@@ -1,0 +1,385 @@
+@use "../mixins" as *;
+.second-section{
+    height: 700px;
+    padding:10px;
+    position:relative;
+    top: -10px;
+    background: #EEE;;
+    & .about-header{
+        width:300px;
+        color:#333;
+        @include upperCaseText;
+        font-size:40px;
+        font-weight:bold;
+        position:relative;
+        transition:all .4s linear;
+        padding: 0 30px ;
+        & span{
+            color:#EEE;
+            -webkit-text-stroke-color: #ec3850;
+            -webkit-text-stroke-width: 2px;
+        }
+    }
+    & .about-list-items{
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: left;
+        background: #DDD;
+        border-radius: 5px;
+        margin-left: 30px;
+        margin-top: 20px;
+        & li{
+            font-size: 24px;
+            padding: 32px;
+            border-bottom: 1px solid #AAA;
+            cursor: pointer;
+            transition:all .4s linear;
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+            &.active{
+                background:#ec3850;
+                color:#EEE;
+            }
+            &:hover{
+                background:#ec3850;
+                color:#EEE;
+            }
+        }
+    }
+    & .right-container{
+        padding:65px 0;
+        & .profile{
+            transform:scale3d(.002, .002, 1);
+            opacity: 0;
+            transition:all .4s linear;
+            &.active{
+                transform: scale3d(1,1,1);
+                opacity: 1;
+            }
+            & .profile-haeder{
+                font-size:30px;
+                font-weight:bold;
+                @include upperCaseText;
+                letter-spacing:2px;
+                color:#333;
+                margin-bottom:15px;
+            }
+            & .address-details{
+                font-size:24px;
+                font-weight:bold;
+                @include capitalizeCaseText;
+                color:#555;
+                margin-bottom:15px;
+                display:block;
+            }
+            & .profile-paragraph{
+                margin-bottom:40px;
+                font-size:18px;
+                @include capitalizeCaseText;
+                color:#888;
+                letter-spacing:2px;
+                word-wrap: break-word;
+            }
+            & a{
+                margin-bottom:15px;
+                font-size:18px;
+                @include upperCaseText;
+                color:#EEE;
+                background:#ec3850;
+                padding:15px 25px;
+                letter-spacing:2px;
+                word-wrap: break-word;
+                position:relative;
+                clip-path: polygon(8% 0, 100% 0%, 88% 100%, 0% 100%);
+                & i{
+                    margin-left: 32px;;
+                }
+                &::before{
+                    content: "";
+                    background: #EEE;
+                    height: 116%;
+                    width: 2px;
+                    position: absolute;
+                    left: 71%;
+                    top: -3px;
+                    transform: rotate(26deg);
+                }
+                &:hover{
+                    text-decoration:none;
+                }
+                &:active{
+                    text-decoration:none;
+                }
+
+            }
+        }
+        & .skills{
+            transform:scale3d(.002, .002, 1);
+            opacity: 0;
+            transition:all .4s linear;
+            display: none;
+            &.active{
+                transform: scale3d(1,1,1);
+                opacity: 1;
+            }
+            & .skills-header{
+                font-size:30px;
+                font-weight:bold;
+                @include upperCaseText;
+                letter-spacing:2px;
+                color:#333;
+                margin-bottom:15px;
+                & span{
+                    -webkit-text-stroke-color: #ec3850;
+                    -webkit-text-stroke-width: 2px;;
+                    color:#EEE;
+                }
+            }
+            & .skills-container{
+                padding:15px;
+                & div > {
+                    label{
+                        font-size: 17px;
+                        letter-spacing: 2px;
+                        color:#333;
+                        font-weight: bold;
+                        @include upperCaseText;
+                    }
+                    .containers{
+                        background: #DDD;
+                        display: block;
+                        margin-bottom: 52px;
+                        border-radius: 4px;
+                        position:relative;
+                        padding: 8px 0;
+                        & .skill-value{
+                            background:linear-gradient(to right, #333, #ec3850);
+                            border-radius:4px;
+                            transition: all .4s linear;
+                            top: 0;
+                            left: 0;
+                            padding: 8px 0;
+                            position: absolute;
+                        }
+                        & .value{
+                            position:absolute;
+                            color:#EEE;
+                            font-weight:bold;
+                            background:#ec3850;
+                            border-radius:5px;
+                            padding:4px 10px;
+                            font-size:13px;
+                            opacity: 0;
+                            top: -36px;
+                            left: 50%;
+                            transform:translateX(-50%);
+                            transition:all .4s linear;
+                            &.acitvate{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .education{
+            transform:scale3d(.002, .002, 1);
+            opacity: 0;
+            transition:all .4s linear;
+            display: none;
+            &.active{
+                transform: scale3d(1,1,1);
+                opacity: 1;
+            }
+            & .education-header{
+                font-size:30px;
+                font-weight:bold;
+                @include upperCaseText;
+                letter-spacing:2px;
+                color:#333;
+                margin-bottom:15px;
+            }
+            & .education-details-one{
+                font-size:16px;
+                background:#FFF;
+                border-radius:4px;
+                padding:7px 10px;
+                position:relative;
+                text-align:left;
+                margin-bottom:20px;
+                @include capitalizeCaseText;
+                letter-spacing:2px;
+                word-wrap:break-word;
+                color:#555;
+                width:500px;
+                &::before{
+                    position:absolute;
+                    content:"";
+                    left:2px;
+                    top:50%;
+                    width:2px;
+                    height:70%;
+                    transform:translateY(-50%);
+                    background:#ec3850
+                }
+                &::after{
+                    position: absolute;
+                    content: "2016 - 2020";
+                    right: 20px;
+                    bottom: 5px;
+                    width: 150px;
+                    text-align: center;
+                    background: #ec3850;
+                    color: #FFF;
+                }
+            }
+            & .education-details-two{
+                font-size:16px;
+                background:#FFF;
+                border-radius:4px;
+                padding:7px 10px;
+                position:relative;
+                text-align:left;
+                @include capitalizeCaseText;
+                letter-spacing:2px;
+                word-wrap:break-word;
+                color:#555;
+                width:500px;
+                font-weight:bold;
+                & .course-details{
+                    display:block;
+                    font-weight:lighter
+                }
+                &::before{
+                    position:absolute;
+                    content:"";
+                    left:2px;
+                    top:50%;
+                    width:2px;
+                    height:70%;
+                    transform:translateY(-50%);
+                    background:#ec3850
+                }
+                &::after{
+                    position: absolute;
+                    content: "2020 - 2021";
+                    right: 20px;
+                    top: 5px;
+                    width: 150px;
+                    text-align: center;
+                    background: #ec3850;
+                    color: #FFF;
+                }
+            }
+            & .education-details-three{
+                font-size:16px;
+                background:#FFF;
+                border-radius:4px;
+                padding:7px 10px;
+                position:relative;
+                text-align:left;
+                @include capitalizeCaseText;
+                letter-spacing:2px;
+                word-wrap:break-word;
+                color:#555;
+                width:500px;
+                font-weight:bold;
+                & .course-details{
+                    display:block;
+                    font-weight:lighter
+                }
+                &::before{
+                    position:absolute;
+                    content:"";
+                    left:2px;
+                    top:50%;
+                    width:2px;
+                    height:70%;
+                    transform:translateY(-50%);
+                    background:#ec3850
+                }
+                &::after{
+                    position: absolute;
+                    content: "2021 - 2022";
+                    right: 20px;
+                    top: 5px;
+                    width: 150px;
+                    text-align: center;
+                    background: #ec3850;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+.benhom{
+    position: relative;
+    top: -116px;
+}
+
+@media (min-width:0px) AND (max-width:500px){
+    .about-header{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .second-section .about-list-items{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        & li{
+            padding: 3px 5px;
+            width: 100%;
+            font-size: 18px !important;
+            &.active{
+                border-radius: 0;
+            }
+            &:hover{
+                border-radius: 0;
+            }
+        }
+    }
+    .benhom{
+        top: -14px;
+    }
+    .second-section .right-container .profile{
+        text-align: center;
+        margin-top: -65px;
+    }
+    .second-section .right-container .skills{
+        margin-top: -65px;
+        & .skills-container{
+            padding: 0 15px;
+            & .container-row{
+                margin: 0 auto;
+                & span.containers{
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    .second-section .right-container .education{
+        margin: -65px auto;
+        .education-details-one, .education-details-two, .education-details-three{
+            margin: 0 auto 20px;
+            width: 100%;
+            padding:27px 10px
+        }
+        .education-details-two::after{
+            top: unset;
+        }
+        .education-details-three::after{
+            top: unset;
+        }
+    }
+}
+
+@media (min-width:501px) AND (max-width:765px){
+    .benhom{
+        top: -14px;
+    }
+
+}

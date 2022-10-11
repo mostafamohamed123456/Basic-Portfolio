@@ -1,0 +1,6 @@
+@mixin upperCaseText{
+    text-transform:uppercase;
+}
+@mixin capitalizeCaseText{
+    text-transform:capitalize;
+}

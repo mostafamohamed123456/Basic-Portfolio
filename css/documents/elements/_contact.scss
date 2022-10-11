@@ -1,0 +1,183 @@
+@use "../mixins" as *;
+.contact{
+    background:#EEE;
+    position:relative;
+    top: -10px;
+    min-height: 700px;;
+    padding-bottom:10px;
+    & .contact-header{
+        width:350px;
+        color:#333;
+        @include upperCaseText;
+        font-size:40px;
+        font-weight:bold;
+        position:relative;
+        transition:all .4s linear;
+        padding: 0 30px ;
+        & span{
+            color:#EEE;
+            -webkit-text-stroke-color: #ec3850;
+            -webkit-text-stroke-width: 2px;
+        }
+    }
+    & .emails-container{
+        padding-top: 80px;;
+        position: relative;
+        & span:first-of-type{
+            position: absolute;
+            
+        }
+        & span:nth-of-type(2){
+            position:absolute;
+            left: 38%;
+        }
+        & span:nth-of-type(3){
+            position:absolute;
+            left: 71%;
+        }
+        & span:nth-of-type(4){
+            position: absolute;
+            top:190px;
+        }
+        & span:nth-of-type(5){
+            position:absolute;
+            top: 190px;
+            left: 71%;
+        }
+        & span:nth-of-type(6){
+            position: absolute;
+            top:298px;
+        }
+        & span:nth-of-type(7){
+            position:absolute;
+            top:298px;
+            left: 38%;
+        }
+        & span:last-of-type{
+            position:absolute;
+            top:298px;
+            left: 71%;
+        }
+    }
+    & .emails-container > {
+        & h2{
+            position: absolute;
+            top: 212%;
+            left: 31%;
+            letter-spacing: 3px;
+            font-weight: bold;
+            @include upperCaseText;
+            color: #ec3850;
+            text-shadow: 2px 2px 4px #000;
+            font-size: 40px;
+        }
+        span{
+            display:block;
+            width:70px;
+            height:70px;
+            border-radius:50%;
+            border:1px solid #888;
+            background: #ec3850;
+            color:#FFF;
+            text-align:center;
+            position:relative;
+            font-size:30px;
+            cursor:pointer;
+            -webkit-box-shadow:2px 2px 4px #888, -2px -2px 4px #888;
+            -moz-box-shadow:2px 2px 4px #888, -2px -2px 4px #888;
+            -o-box-shadow:2px 2px 4px #888, -2px -2px 4px #888;
+            box-shadow:2px 2px 4px #888, -2px -2px 4px #888;
+            & i{
+                position:absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+    & .message{
+        padding: 20px 40px;
+        background:#ec3850;
+        border-radius:4px;
+        -webkit-box-shadow:2px 2px 4px #888, -2px -2px 4px #888;
+        -moz-box-shadow:2px 2px 4px #888, -2px -2px 4px #888;
+        -o-box-shadow:2px 2px 4px #888, -2px -2px 4px #888;
+        box-shadow:2px 2px 4px #888, -2px -2px 4px #888;
+        & form{
+            width: 100%;;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            
+            & input, textarea{
+                width: 100%;
+                background:#FFF;
+                border:0px;
+                border-radius:4px;
+                padding:4px 7px;
+                font-size:18px;
+                @include capitalizeCaseText;
+                outline:none;
+                resize:none;
+            }
+            & textarea{
+                height: 150px;;
+            }
+            & input[type=submit]{
+                background:#DDD;
+                color:#333;
+                @include upperCaseText;
+                letter-spacing: 3px;;
+            }
+        }
+    }
+}
+@media (min-width:0px) AND (max-width:500px){
+    .contact-header{
+        text-align: center;
+        margin: 0 auto 5px;
+    }
+    .emails-container{
+        padding-top: 0px !important;
+        position: relative !important;
+        left: 27px !important;
+        & h2{
+            top: 131px !important;
+            left: 24% !important;
+        }
+        & span:nth-of-type(4){
+            top: 143px !important;
+        }
+        & span:nth-of-type(5){
+            top: 143px !important;
+        }
+    }
+    .message{
+        margin-top: 413px !important;
+    }
+}
+@media (min-width:501px) AND (max-width:1000px){
+    .contact-header{
+        text-align: center;
+        margin: 0 auto 5px;
+    }
+    .emails-container{
+        padding-top: 0px !important;
+        position: relative !important;
+        left: 27px !important;
+        & h2{
+            top: 131px !important;
+            left: 29% !important;
+        }
+        & span:nth-of-type(4){
+            top: 143px !important;
+        }
+        & span:nth-of-type(5){
+            top: 143px !important;
+        }
+    }
+    .message{
+        margin-top: 413px !important;
+    }
+}

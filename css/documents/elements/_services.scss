@@ -1,0 +1,66 @@
+@use "../mixins" as *;
+.services{
+    & .services-header{
+        width:350px;
+        color:#ec3850;
+        @include upperCaseText;
+        font-size:40px;
+        font-weight:bold;
+        position:relative;
+        transition:all .4s linear;
+        padding: 0 30px ;
+        & span{
+            color:#FFF;
+        }
+    }
+    & .services-container{
+        text-align:center;
+        margin: 0 auto;
+        & .row > {
+            justify-content: center;
+            div{
+                border: 1px solid #ec3850;
+                color:#FFF;
+                border-radius:3px;
+                padding:4px;
+                margin: 15px 40px;
+                cursor:pointer;
+                transition:all .3s linear;
+                & span{
+                    display: block;
+                    text-align: center;
+                    font-size:45px;
+                    margin-bottom:20px;
+                }
+                & header{
+                    font-size:22px;
+                    margin-bottom:20px;
+                    color:#ec3850;
+                    font-weight:bold;
+                    @include upperCaseText
+                }
+                & p{
+                    font-size:17px;
+                    margin-bottom:15px;
+                    @include capitalizeCaseText;
+                    word-wrap:break-word
+                }
+                &:hover{
+                    background: #ec3850;
+                    border: 1px solid #FFF;
+                    transform: translateY(-10px);
+                    & header{
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:0px) AND (max-width:1000px){
+    .services-header{
+        text-align: center;
+        margin: 0 auto 5px;
+    }
+}

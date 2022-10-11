@@ -1,0 +1,23 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    list-style:none;
+    text-decoration:none;
+}
+html{
+    scroll-behavior:smooth;
+    touch-action: auto;
+}
+body{
+    background:linear-gradient(to bottom right, #030825, #000);
+    background-repeat: no-repeat;
+    min-height: 5900px;
+}
+img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    display:block;
+}
