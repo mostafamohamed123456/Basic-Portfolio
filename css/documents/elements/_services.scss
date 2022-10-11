@@ -9,6 +9,7 @@
         position:relative;
         transition:all .4s linear;
         padding: 0 30px ;
+        opacity: 0;
         & span{
             color:#FFF;
         }
@@ -16,6 +17,10 @@
     & .services-container{
         text-align:center;
         margin: 0 auto;
+        position: relative;
+        left: -100%;
+        transition: all .5s linear;
+        transform: scale(.002,.002);
         & .row > {
             justify-content: center;
             div{

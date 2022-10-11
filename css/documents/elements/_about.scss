@@ -14,6 +14,7 @@
         position:relative;
         transition:all .4s linear;
         padding: 0 30px ;
+        opacity: 0;
         & span{
             color:#EEE;
             -webkit-text-stroke-color: #ec3850;
@@ -30,6 +31,9 @@
         border-radius: 5px;
         margin-left: 30px;
         margin-top: 20px;
+        position: relative;
+        left: -108%;
+        transition: all .5s linear;
         & li{
             font-size: 24px;
             padding: 32px;
@@ -50,6 +54,9 @@
     }
     & .right-container{
         padding:65px 0;
+        position: relative;
+        right:-200%;
+        transition: all .5s linear;
         & .profile{
             transform:scale3d(.002, .002, 1);
             opacity: 0;
@@ -172,9 +179,9 @@
                             padding:4px 10px;
                             font-size:13px;
                             opacity: 0;
-                            top: -36px;
-                            left: 50%;
-                            transform:translateX(-50%);
+                            top: 0;
+                            left: 0;
+                            height: 100%;
                             transition:all .4s linear;
                             &.acitvate{
                                 opacity: 1;

@@ -16,6 +16,7 @@ body {
   background: linear-gradient(to bottom right, #030825, #000);
   background-repeat: no-repeat;
   min-height: 5900px;
+  overflow-x: hidden;
 }
 
 img {
@@ -23,6 +24,56 @@ img {
   height: 100px;
   border-radius: 50%;
   display: block;
+}
+
+.new-nav-bar-list {
+  position: absolute;
+  border-radius: 4px;
+  padding: 17px 35px;
+  box-shadow: 4px 4px 8px #eee;
+  width: 200px;
+  height: 200px;
+  top: 43px;
+  right: 59px;
+  transition: all 0.3s linear;
+  transform: scale(0.002, 0.002);
+  display: none;
+}
+.new-nav-bar-list li a {
+  color: #EEE;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.new-nav-bar-list li a:hover {
+  text-decoration: none;
+}
+.new-nav-bar-list li a:active {
+  text-decoration: none;
+}
+.new-nav-bar-list li a:focus {
+  text-decoration: none;
+}
+.new-nav-bar-list li a i {
+  margin-right: 3px;
+}
+
+#scroll-to-top {
+  position: fixed;
+  padding: 10px;
+  font-size: 18px;
+  background: #ec3850;
+  color: #EEE;
+  top: 90%;
+  right: 100px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 0px;
+  cursor: pointer;
 }
 
 .navBar {
@@ -276,6 +327,7 @@ img {
   position: relative;
   transition: all 0.4s linear;
   padding: 0 30px;
+  opacity: 0;
 }
 .second-section .about-header span {
   color: #EEE;
@@ -292,6 +344,9 @@ img {
   border-radius: 5px;
   margin-left: 30px;
   margin-top: 20px;
+  position: relative;
+  left: -108%;
+  transition: all 0.5s linear;
 }
 .second-section .about-list-items li {
   font-size: 24px;
@@ -312,6 +367,9 @@ img {
 }
 .second-section .right-container {
   padding: 65px 0;
+  position: relative;
+  right: -200%;
+  transition: all 0.5s linear;
 }
 .second-section .right-container .profile {
   transform: scale3d(0.002, 0.002, 1);
@@ -437,9 +495,9 @@ img {
   padding: 4px 10px;
   font-size: 13px;
   opacity: 0;
-  top: -36px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  height: 100%;
   transition: all 0.4s linear;
 }
 .second-section .right-container .skills .skills-container div > .containers .value.acitvate {
@@ -650,6 +708,7 @@ img {
   position: relative;
   transition: all 0.4s linear;
   padding: 0 30px;
+  opacity: 0;
 }
 .services .services-header span {
   color: #FFF;
@@ -657,6 +716,10 @@ img {
 .services .services-container {
   text-align: center;
   margin: 0 auto;
+  position: relative;
+  left: -100%;
+  transition: all 0.5s linear;
+  transform: scale(0.002, 0.002);
 }
 .services .services-container .row > {
   justify-content: center;
@@ -710,6 +773,7 @@ img {
   top: -10px;
   min-height: 700px;
   padding-bottom: 10px;
+  overflow: hidden;
 }
 .contact .contact-header {
   width: 350px;
@@ -720,6 +784,7 @@ img {
   position: relative;
   transition: all 0.4s linear;
   padding: 0 30px;
+  opacity: 0;
 }
 .contact .contact-header span {
   color: #EEE;
@@ -729,6 +794,22 @@ img {
 .contact .emails-container {
   padding-top: 80px;
   position: relative;
+  transition: all 0.5s linear;
+  top: -300px;
+}
+.contact .emails-container.startAnimation {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-name: emailsAnimated;
+          animation-name: emailsAnimated;
 }
 .contact .emails-container span:first-of-type {
   position: absolute;
@@ -763,6 +844,40 @@ img {
   position: absolute;
   top: 298px;
   left: 71%;
+}
+@-webkit-keyframes emailsAnimated {
+  0% {
+    top: -300px;
+  }
+  25% {
+    top: -250px;
+  }
+  50% {
+    top: -200px;
+  }
+  75% {
+    top: -150px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes emailsAnimated {
+  0% {
+    top: -300px;
+  }
+  25% {
+    top: -250px;
+  }
+  50% {
+    top: -200px;
+  }
+  75% {
+    top: -150px;
+  }
+  100% {
+    top: 0;
+  }
 }
 .contact .emails-container > h2 {
   position: absolute;
@@ -802,6 +917,8 @@ img {
   border-radius: 4px;
   -o-box-shadow: 2px 2px 4px #888, -2px -2px 4px #888;
   box-shadow: 2px 2px 4px #888, -2px -2px 4px #888;
+  transition: all 0.4s linear;
+  transform: scale(0.002, 0.002);
 }
 .contact .message form {
   width: 100%;
